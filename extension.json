@@ -1,0 +1,9 @@
+{
+  "id": "contentful-practice",
+  "name": "contentful-practice",
+  "srcdoc": "./build/index.html",
+  "fieldTypes": [
+    "Entry",
+    "Entries"
+  ]
+}
