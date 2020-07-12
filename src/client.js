@@ -1,3 +1,11 @@
+/**
+ * Note that this is not a React component
+ * Client gets created in Dialog.js and is used to interface with the Unsplash api
+ *
+ * TO DO: research the Unsplash SDK and see if it might make more sense to use that
+ * versus hand rolling this client
+ * https://github.com/unsplash/unsplash-js#search
+ */
 export default class Client {
   UNSPLASH_HOST = 'https://api.unsplash.com';
 

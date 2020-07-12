@@ -87,6 +87,8 @@
 
 .search-collection {
   display: flex;
+  overflow-y: scroll;
+  min-height: auto;
   justify-content: space-between;
   align-content: stretch;
   align-items: stretch;
