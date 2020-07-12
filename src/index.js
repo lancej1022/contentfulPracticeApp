@@ -7,16 +7,15 @@ import Dialog from './Dialog';
 import '@contentful/forma-36-react-components/dist/styles.css';
 import './index.scss';
 
-function renderAtRoot(component) {
-  return render(component, document.getElementById('root'));
-}
-
+/**
+ * Used to determine which component to render when the app is initialized
+ */
 init((sdk) => {
   if (sdk.location.is(locations.LOCATION_APP_CONFIG)) {
-    renderAtRoot(<Config sdk={sdk} />);
+    render(<Config sdk={sdk} />, document.getElementById('root'));
   } else if (sdk.location.is(locations.LOCATION_ENTRY_FIELD)) {
-    renderAtRoot(<FieldEditor sdk={sdk} />);
+    render(<FieldEditor sdk={sdk} />, document.getElementById('root'));
   } else if (sdk.location.is(locations.LOCATION_DIALOG)) {
-    renderAtRoot(<Dialog sdk={sdk} />);
+    render(<Dialog sdk={sdk} />, document.getElementById('root'));
   }
 });

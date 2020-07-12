@@ -9,7 +9,7 @@ function formatPhotoThumb(url) {
   return url.replace('fit=max', 'fit=fillmax').concat('&w=300&h=300');
 }
 
-export default class Dialog {
+export default class Dialog extends React.Component {
   constructor(props) {
     super(props);
 

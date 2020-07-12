@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@contentful/forma-36-react-components';
 
-export default class FieldEditor {
+export default class FieldEditor extends React.Component {
   constructor(props) {
     super(props);
 
