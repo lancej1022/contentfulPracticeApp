@@ -24,7 +24,7 @@ const DialogHook = ({ sdk }) => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    // sdk.window.startAutoResizer();
+    sdk.window.startAutoResizer();
   });
 
   /** value must be a string. Debounce is used to avoid sending a ton of API calls to Unsplash */
@@ -35,6 +35,8 @@ const DialogHook = ({ sdk }) => {
     }
 
     const res = await client.search(value);
+    // lets see what JSON we get back to see if we can fill multiple fields
+    console.log(res);
 
     setError(res.error);
     setPhotos(res.photos);
@@ -49,7 +51,8 @@ const DialogHook = ({ sdk }) => {
       <div>
         <TextInput
           width="full"
-          type="text"
+          type="search"
+          // type="text"
           id="my-field"
           testId="my-field"
           placeholder="Search for a photo"

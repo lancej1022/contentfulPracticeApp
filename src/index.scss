@@ -1,5 +1,9 @@
 @import '@contentful/forma-36-tokens/dist/css/index.css';
 
+#root {
+  overflow-y: scroll;
+}
+
 .app {
   .body {
     height: auto;
@@ -87,8 +91,6 @@
 
 .search-collection {
   display: flex;
-  overflow-y: scroll;
-  min-height: auto;
   justify-content: space-between;
   align-content: stretch;
   align-items: stretch;

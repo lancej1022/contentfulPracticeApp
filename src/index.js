@@ -13,6 +13,7 @@ import './index.scss';
 init((sdk) => {
   if (sdk.location.is(locations.LOCATION_APP_CONFIG)) {
     render(<Config sdk={sdk} />, document.getElementById('root'));
+    sdk.window.startAutoResizer();
   } else if (sdk.location.is(locations.LOCATION_ENTRY_FIELD)) {
     render(<FieldEditor sdk={sdk} />, document.getElementById('root'));
   } else if (sdk.location.is(locations.LOCATION_DIALOG)) {
